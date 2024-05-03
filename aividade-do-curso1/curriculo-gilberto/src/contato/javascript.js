@@ -1,7 +1,7 @@
 const form   = document.getElementById('form')
 const campos = document.querySelectorAll('.required')
-const spans  = document.querySelectorAll('.spans-required')
-const emailRegex =  /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+const spans  = document.querySelectorAll('spans-required')
+const emailRegex =  /.*@[a-z0-9.-][a-z.]*/i
 
 
 function setError(index) {
@@ -17,7 +17,7 @@ function setError(index) {
 
 function nameValidate() 
 {
-    if(campos[0].value.length < 3)
+    if(campos[0].value.length < 8)
     {
         setError(0)
     }
@@ -37,7 +37,4 @@ function emailValidate()
     { 
         removeError(1)
     }
-        
-
-    
-}
+} 

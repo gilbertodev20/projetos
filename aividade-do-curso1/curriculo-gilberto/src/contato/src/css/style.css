@@ -115,11 +115,6 @@ label{
     text-align: left;
     gap: 50px;
 }
-
-
-
-
-
 #btn{
     padding: 10px 50px;
     background: linear-gradient(90deg, rgba(11,33,101,1) 0%, rgba(27,41,93,1) 23%, rgba(56,60,78,1) 100%);
