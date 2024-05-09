@@ -69,3 +69,16 @@ let celular = document.getElementById("celular");
     }
    celular.value = numeroFormatado;
  });
+ function enviarParaWhatsApp() {
+  const nome = document.getElementById('input-name').value;
+  const email = document.getElementById('input-email').value;
+  const telefone = document.getElementById('celular').value;
+  const mensagem = document.getElementById('input-msg').value;
+
+  const texto = `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`;
+  const textoCodificado = encodeURIComponent(texto);
+  const numeroWhatsApp = '5582991390143'; // Insira o número de telefone do WhatsApp aqui (apenas números)
+  const url = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
+
+  window.open(url, '_blank');
+}
